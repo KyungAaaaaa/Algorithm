@@ -12,9 +12,7 @@ public class Baekjoon11727 {
         int size = Integer.parseInt(br.readLine());
         dp = new int[size + 1];
         dp[0] = dp[1] = 1;
-        if (size > 1) {
-            dp[2] = 3;
-        }
+
         //top-down
         topDown(size);
         //bottom-up
@@ -24,7 +22,7 @@ public class Baekjoon11727 {
     }
 
     private static void bottomUp(int size) {
-        for (int i = 3; i <= size; i++) {
+        for (int i = 2; i <= size; i++) {
             dp[i] = 2 * dp[i - 2] + dp[i - 1];
             dp[i] %= 10007;
         }
