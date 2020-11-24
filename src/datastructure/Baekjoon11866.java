@@ -17,14 +17,16 @@ public class Baekjoon11866 {
             queue.add(i);
         }
         bw.append("<");
-        int count = 0;
+        boolean start = false;
         while (!queue.isEmpty()) {
-            if (count != 0) bw.append(", ");
-            for (int i = 0; i < k-1; i++) {
+            if (start)
+                bw.append(", ");
+            else start = true;
+            for (int i = 0; i < k - 1; i++) {
                 queue.offer(queue.poll());
             }
             bw.append(String.valueOf(queue.poll()));
-            count++;
+
         }
 
         bw.append(">").flush();
