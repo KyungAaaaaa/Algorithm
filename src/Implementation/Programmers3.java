@@ -16,7 +16,7 @@ public class Programmers3 {
 //        else return false;
 //        return sumP == sumY;
 
-        return s.chars().filter(c -> 'p' == c || 'P' == c).count() == s.chars().filter(c -> 'y' == c || 'Y' == c).count();
+//        return s.chars().filter(c -> 'p' == c || 'P' == c).count() == s.chars().filter(c -> 'y' == c || 'Y' == c).count();
         ;
     }
 
